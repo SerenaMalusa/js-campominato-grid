@@ -18,7 +18,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 #### funzione che genera la griglia (nell'elemento html, numero di celle)
 - creo variabile che sia uguale alla radice quadrata del numero di celle
 - creo un ciclo che conta da 0 a numero di celle -1 e per ogni giro
-    - genero una cella (con indice giro)
+    - genero una cella (con indice giro, radice)
     - la aggiungo come figlia all elem html grid_container
 
 #### funzione che genera la cella (indice cella, radice)

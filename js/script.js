@@ -1,6 +1,7 @@
-console.log('file connected');
+// Al caricamento della pagina
+// prendo gli elementi dal dom
+const gridContainerEl = document.getElementById('grid_container');
+const resetGridBtnEl = document.getElementById('header_btn');
 
-let num = 49;
-
-const square = Math.sqrt(num);
-console.log(square);
+// genero la griglia da 100 celle in grid_container
+createGrid (gridContainerEl, 100);
