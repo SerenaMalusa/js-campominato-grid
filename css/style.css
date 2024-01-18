@@ -45,14 +45,22 @@ header {
     font-weight: 700;
 }
 
-#header_btn {
+#header_btn, 
+#difficulty {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
     color: var(--color-primary);
+    margin-right: var(--base-space);
+}
+
+#difficulty {
+    text-align: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 /***********************
-    HEADER
+    MAIN
 ***********************/
 #main {
     height: calc(100vh - var(--header-h)*1.5);
