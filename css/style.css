@@ -11,6 +11,10 @@ img {
     max-width: 100%;
 }
 
+body {
+    color: var(--color-secondary);
+}
+
 /***********************
     CUSTOM PROPS
 ***********************/
@@ -29,7 +33,6 @@ img {
 ***********************/
 header {
     height: var(--header-h);
-    color: var(--color-secondary);
     padding: var(--base-space) 0;
 }
 
@@ -75,3 +78,13 @@ header {
     border: 1px solid white;
 }
 
+/***********************
+    FOOTER
+***********************/
+footer {
+    padding: var(--base-space) 0;
+}
+
+#footer_text {
+    margin-left: 20px;
+}
