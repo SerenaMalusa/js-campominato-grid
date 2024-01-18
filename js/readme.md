@@ -31,5 +31,5 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 - restituisco la cella
 
 #### funzione che gestisce il click della cella
-- do alla cella la classe azzurro
+- do/levo alla cella la classe cliccata
 - stampo in console l'attributo indice della cella
