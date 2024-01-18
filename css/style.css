@@ -69,13 +69,17 @@ header {
 
     display: flex;
     flex-wrap: wrap;
-
+    align-content: flex-start;
 }
 
 .cell {
-    height: calc(100% / 4);
+    /* height: calc(100% / 10); */
     aspect-ratio: 1;
     border: 1px solid white;
+}
+
+.clicked {
+    background-color: var(--color-primary);
 }
 
 /***********************
