@@ -15,5 +15,28 @@ img {
     CUSTOM PROPS
 ***********************/
 :root {
-    
+    --color-primary: #00e165;
+    --color-secondary: #001432;
+}
+
+/***********************
+    HEADER
+***********************/
+header {
+    color: var(--color-secondary);
+}
+
+#logo_img {
+    height: 100px;
+}
+
+#logo_title {
+    line-height: 95px;
+    font-weight: 700;
+}
+
+#header_btn {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-primary);
 }
