@@ -17,21 +17,28 @@ img {
 :root {
     --color-primary: #00e165;
     --color-secondary: #001432;
+
+    --base-space: 5px;
+    --logo-h: 60px;
+    --header-h: calc(var(--logo-h) + var(--base-space)*2);
+    --grid-h: 570px;
 }
 
 /***********************
     HEADER
 ***********************/
 header {
+    height: var(--header-h);
     color: var(--color-secondary);
+    padding: var(--base-space) 0;
 }
 
 #logo_img {
-    height: 100px;
+    height: var(--logo-h);
 }
 
 #logo_title {
-    line-height: 95px;
+    line-height: calc(var(--logo-h) - 5px);
     font-weight: 700;
 }
 
@@ -40,3 +47,31 @@ header {
     border-color: var(--color-secondary);
     color: var(--color-primary);
 }
+
+/***********************
+    HEADER
+***********************/
+#main {
+    height: calc(100vh - var(--header-h)*1.5);
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+}
+
+#grid_container {
+    margin: 0 auto;
+    height: var(--grid-h);
+    aspect-ratio: 1;
+    border: 2px solid white;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.cell {
+    height: calc(100% / 4);
+    aspect-ratio: 1;
+    border: 1px solid white;
+}
+
