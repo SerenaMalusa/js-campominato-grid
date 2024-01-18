@@ -41,9 +41,24 @@ function createCell(cellIndex,cellsPerRow) {
 
     // al click della cella
     cell.addEventListener('click', function () {
-        console.log('click',cellIndex+1);
+        // console.log('click',cellIndex+1);
+        handleCellClick(cell);
     })
 
     return cell;
+
+}
+
+/**
+ * funzione che gestisce il click della cella
+ * @param {object} cell cella da cliccare
+ */
+function handleCellClick(cell) {
+
+    // do/levo alla cella la classe cliccata
+    cell.classList.add('clicked');
+
+    // stampo in console l'attributo indice della cella
+    console.log(cell.getAttribute('data-index'));
 
 }
