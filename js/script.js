@@ -16,7 +16,7 @@ resetGridBtnEl.addEventListener('click', function () {
     //prendo il valore del select e lo salvo nella variabile tot celle
     const totCells = parseInt(difficultySelectEL.value);
 
-    // rigenero la griglia da 100 celle in grid_container
+    // rigenero la griglia da totCelle in grid_container
     createGrid (gridContainerEl, totCells);
 
 })

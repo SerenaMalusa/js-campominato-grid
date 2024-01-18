@@ -1,7 +1,7 @@
 /**
  * funzione che genera la griglia
  * @param {object} container elemento html in cui stampare la griglia
- * @param {number} totCells numero di celle
+ * @param {number} totCells numero di celle da generare
  */
 function createGrid (container, totCells) {
     // creo variabile che sia uguale alla radice quadrata del numero di celle
