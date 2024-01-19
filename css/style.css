@@ -88,6 +88,11 @@ header {
 
 .clicked {
     background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.bomb {
+    background-color: red;
 }
 
 /***********************

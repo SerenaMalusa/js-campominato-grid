@@ -25,7 +25,7 @@ function createGrid (container, totCells) {
  * @param {number} cellIndex indice/numero cella
  * @param {number} cellsPerRow numero di celle per riga
  */
-function createCell(cellIndex,cellsPerRow) {
+function createCell(cellIndex, cellsPerRow) {
     
     // creo la cella
     const cell = document.createElement('div');
@@ -41,8 +41,10 @@ function createCell(cellIndex,cellsPerRow) {
 
     // al click della cella
     cell.addEventListener('click', function () {
-        // console.log('click',cellIndex+1);
+
+        // console.log('click',cellIndex);
         handleCellClick(cell);
+
     })
 
     return cell;
@@ -55,11 +57,30 @@ function createCell(cellIndex,cellsPerRow) {
  */
 function handleCellClick(cell) {
 
-    // do/levo alla cella la classe cliccata
-    cell.classList.add('clicked');
+    // prenDo l'attributo indice della cella
+    let cellIndex = parseInt(cell.getAttribute('data-index'));
 
-    // stampo in console l'attributo indice della cella
-    console.log(cell.getAttribute('data-index'));
+    if (!gameOver) {
+
+        // se l'indice della cella è presente tra le bombe
+        if (bombs.includes(cellIndex)) {
+            
+            //aggiungo la classe bomba
+            cell.classList.add('bomb');
+            alert('Mi dispiace hai perso');
+            gameOver = true;
+    
+        // altrimenti
+        } else { 
+            
+            // aggiungi cellIndex come testo della cella
+            cell.innerText = cellIndex;
+            // do alla cella la classe cliccata
+            cell.classList.add('clicked');
+    
+        }
+
+    }
 
 }
 
@@ -69,7 +90,7 @@ function handleCellClick(cell) {
  * @param {number} bombMax - numero massimo che la bomba può avere (incluso)
  * @param {number} bombMin - numero minoimo che la bomba può avere, default 1
  */
-function genBombs(totBombs,bombMax,bombMin = 1) {
+function genBombs(totBombs, bombMax, bombMin = 1) {
 
     // creo array che conterrà le bombe
     const bombs = [];
@@ -82,6 +103,7 @@ function genBombs(totBombs,bombMax,bombMin = 1) {
 
         // se il mio array non contiene già quel numero, lo aggiungo 
         if (!bombs.includes(bomb)) bombs.push(bomb);
+
     }
 
     return bombs;
