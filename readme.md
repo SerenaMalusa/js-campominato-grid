@@ -19,6 +19,16 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 ### Consigli del giorno
 Scriviamo prima cosa vogliamo fare passo passo in italiano, dividiamo il lavoro in micro problemi.  
 Ad esempio  
-Di cosa ho bisogno per generare i numeri?  
+Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+## Esercizio di oggi (19/1/24): Campo Minato
+
+nome repo: `js-campominato-grid`
+
+### Traccia 1
+
+Partiamo da quanto fatto già ieri, quindi lavoriamo nella stessa repo.  
+Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.  
+Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.

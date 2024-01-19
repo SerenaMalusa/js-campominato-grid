@@ -6,6 +6,7 @@ const difficultySelectEL = document.getElementById('difficulty');
 
 // genero la griglia da 100 celle in grid_container
 createGrid (gridContainerEl, 100);
+console.log(genBombs (16,100));
 
 // Al click del bottone
 resetGridBtnEl.addEventListener('click', function () {
@@ -19,4 +20,9 @@ resetGridBtnEl.addEventListener('click', function () {
     // rigenero la griglia da totCelle in grid_container
     createGrid (gridContainerEl, totCells);
 
+    // genero un numero di bombe casuali in base alla difficoltà
+    console.log(totCells);
+    console.log(genBombs(16,totCells));
+
 })
+

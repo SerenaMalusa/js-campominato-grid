@@ -62,3 +62,28 @@ function handleCellClick(cell) {
     console.log(cell.getAttribute('data-index'));
 
 }
+
+/**
+ * funzione che genera tot numeri causali nel range dato
+ * @param {number} totbombs - numero di bombe che verranno generate
+ * @param {number} bombMax - numero massimo che la bomba può avere (incluso)
+ * @param {number} bombMin - numero minoimo che la bomba può avere, default 1
+ */
+function genBombs(totBombs,bombMax,bombMin = 1) {
+
+    // creo array che conterrà le bombe
+    const bombs = [];
+
+    // finchè il mio array non sarà lungo 16
+    while (bombs.length < totBombs) {
+
+        // genero 1 numero casuale da 1 a range
+        const bomb = Math.floor(Math.random() * (bombMax - bombMin) + bombMin);
+
+        // se il mio array non contiene già quel numero, lo aggiungo 
+        if (!bombs.includes(bomb)) bombs.push(bomb);
+    }
+
+    return bombs;
+
+}
