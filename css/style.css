@@ -81,7 +81,7 @@ header {
     margin: 0 auto;
     height: var(--grid-h);
     aspect-ratio: 1;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 
     display: flex;
     flex-wrap: wrap;
