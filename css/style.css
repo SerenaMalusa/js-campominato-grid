@@ -45,6 +45,14 @@ header {
     font-weight: 700;
 }
 
+#header_points {
+    font-size: 1.1rem;
+}
+
+#points_counter {
+    color: var(--color-primary);
+}
+
 #header_btn, 
 #difficulty {
     background-color: var(--color-secondary);

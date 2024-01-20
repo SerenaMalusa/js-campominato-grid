@@ -3,6 +3,7 @@
 const gridContainerEl = document.getElementById('grid_container');
 const resetGridBtnEl = document.getElementById('header_btn');
 const difficultySelectEL = document.getElementById('difficulty');
+const pointsCounterEl = document.getElementById('points_counter');
 
 // genero la griglia da 100 celle in grid_container
 createGrid (gridContainerEl, 100);
@@ -41,6 +42,7 @@ resetGridBtnEl.addEventListener('click', function () {
 
     // resetto il punteggio utente
     userPoints = 0;
+    pointsCounterEl.innerText = '00';
 
     // rigenero la griglia da totCelle in grid_container
     createGrid (gridContainerEl, totCells);

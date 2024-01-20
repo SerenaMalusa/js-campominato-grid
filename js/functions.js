@@ -80,9 +80,9 @@ function handleCellClick(cell) {
             cell.innerText = cellIndex;
             // do alla cella la classe cliccata
             cell.classList.add('clicked');
-            // il punteggio aumenta di 1
+            // il punteggio aumenta di 1 e viene aggiornato nel contatore
             userPoints ++;
-            console.log(userPoints);
+            pointsCounterEl.innerText = (userPoints < 10) ? '0' + userPoints : userPoints;
 
             // quando il punteggio è uguale al punteggio massimo 
             // la partita finisce e la pagina genera un messaggio di vittoria
