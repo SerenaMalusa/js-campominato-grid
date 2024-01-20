@@ -10,7 +10,14 @@ createGrid (gridContainerEl, 100);
 let bombs = genBombs (16,100);
 console.log(bombs);
 
+// variabile switch di fine gioco
 let gameOver = false;
+
+// creo una variabile punteggio massimo = al numero di celle - il numero di bombe
+let maxPoints = 100 - bombs.length;
+
+// creo una variabile punteggio = 0 
+let userPoints = 0;
 
 // Al click del bottone
 resetGridBtnEl.addEventListener('click', function () {
@@ -23,12 +30,18 @@ resetGridBtnEl.addEventListener('click', function () {
     //prendo il valore del select e lo salvo nella variabile tot celle
     const totCells = parseInt(difficultySelectEL.value);
 
-    // rigenero la griglia da totCelle in grid_container
-    createGrid (gridContainerEl, totCells);
-
     // genero un numero di bombe casuali in base alla difficoltà
     bombs = genBombs (16,totCells);
     console.log(bombs);
+
+    // rigenero il punteggio massimo in base alla difficoltà
+    maxPoints = totCells - 16;
+
+    // resetto il punteggio utente
+    userPoints = 0;
+
+    // rigenero la griglia da totCelle in grid_container
+    createGrid (gridContainerEl, totCells);
 
 })
 

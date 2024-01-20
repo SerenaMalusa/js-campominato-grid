@@ -67,8 +67,10 @@ function handleCellClick(cell) {
             
             //aggiungo la classe bomba
             cell.classList.add('bomb');
-            alert('Mi dispiace hai perso');
+            gridContainerEl.classList.add('game-over');
             gameOver = true;
+            alert(`Mi dispiace hai perso :(
+                Punteggio: ${userPoints}`);
     
         // altrimenti
         } else { 
@@ -77,6 +79,17 @@ function handleCellClick(cell) {
             cell.innerText = cellIndex;
             // do alla cella la classe cliccata
             cell.classList.add('clicked');
+            // il punteggio aumenta di 1
+            userPoints ++;
+            console.log(userPoints);
+
+            // quando il punteggio è uguale al punteggio massimo 
+            // la partita finisce e la pagina genera un messaggio di vittoria
+            if (userPoints == maxPoints) {
+                gameOver = true;
+                alert (`Compltimenti hai vinto!
+                Punteggio massimo: ${userPoints}`)
+            }
     
         }
 

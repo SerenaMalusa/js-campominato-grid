@@ -47,3 +47,19 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - svuoto la griglia presente
 - prendo il valore del select e lo salvo nella variabile tot celle
 - genero la griglia da tot celle in grid_container
+
+--------------------------------------------------------------
+### Traccia 3
+
+La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).   
+Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
+
+### Svoglimento
+
+1. creo una variabile punteggio massimo = al numero di celle - il numero di bombe
+    - la variabile deve essere cambiata ogni volta che si resetta la griglia (al caricamento + al click del tasto reset)
+2. creo una variabile punteggio = 0 
+    -   il punteggio si deve resettare ogni volta che si resetta la griglia
+2. ogni volta che si clicca su una cella che non è una bomba il punteggio aumenta di 1
+3. quando il punteggio è uguale al punteggio massimo la partita finisce e la pagina genera un messaggio di vittoria
+4. sia nel messaggio di vittoria che nel messaggio di sconfitta devo mostrare il punteggio ottenuto

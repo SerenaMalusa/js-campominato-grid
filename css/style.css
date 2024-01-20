@@ -80,6 +80,10 @@ header {
     align-content: flex-start;
 }
 
+.game-over {
+    cursor: not-allowed;
+}
+
 .cell {
     height: calc(100% / 10);
     aspect-ratio: 1;
@@ -89,6 +93,7 @@ header {
 .clicked {
     background-color: var(--color-primary);
     color: var(--color-secondary);
+    cursor: not-allowed;
 }
 
 .bomb {
