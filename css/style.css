@@ -25,7 +25,7 @@ body {
     --base-space: 5px;
     --logo-h: 60px;
     --header-h: calc(var(--logo-h) + var(--base-space)*2);
-    --grid-h: 570px;
+    --grid-w: 570px;
 }
 
 /***********************
@@ -47,6 +47,7 @@ header {
 
 #header_points {
     font-size: 1.1rem;
+    justify-self: center;
 }
 
 #points_counter {
@@ -79,7 +80,7 @@ header {
 
 #grid_container {
     margin: 0 auto;
-    height: var(--grid-h);
+    width: var(--grid-w);
     aspect-ratio: 1;
     /* border: 2px solid white; */
 
@@ -96,6 +97,7 @@ header {
     height: calc(100% / 10);
     aspect-ratio: 1;
     border: 1px solid white;
+    padding: 0 var(--base-space);
 }
 
 .clicked {
@@ -113,8 +115,64 @@ header {
 ***********************/
 footer {
     padding: var(--base-space) 0;
+    height: calc(var(--header-h)*0.5);
 }
 
 #footer_text {
     margin-left: 20px;
+}
+
+/********************************************
+                MEDIA QUERY
+********************************************/
+@media screen and (max-width: 992px) {
+
+    :root {
+        --grid-w: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --grid-w: 680px;
+        --header-h: 90px;
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo_title {
+        font-size: 1.8rem;
+    }
+
+    #footer_text {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    :root {
+        --grid-w: 500px;
+        --header-h: 200px;
+    }
+
+    #logo_title {
+        font-size: 2rem;
+    }
+
+    #header_form {
+        margin-left: 10px;
+    }
+
+    #header_points {
+        margin-right: 10px;
+    }
+
+    footer > .container {
+        padding-top: 20px;
+    }
 }
