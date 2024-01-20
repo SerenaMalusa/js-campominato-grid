@@ -60,6 +60,11 @@ header {
     border-color: var(--color-secondary);
     color: var(--color-primary);
     margin-right: var(--base-space);
+
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 37px;
 }
 
 #difficulty {
@@ -156,7 +161,7 @@ footer {
 @media screen and (max-width: 576px) {
 
     :root {
-        --grid-w: 500px;
+        --grid-w: 510px;
         --header-h: 200px;
     }
 
@@ -180,4 +185,25 @@ footer {
     footer > .container {
         padding-top: 20px;
     }
+}
+
+@media screen and (max-width: 400px) {
+
+    :root {
+        --grid-w: 340px;
+    }
+
+    header .container {
+        gap: 15px;
+    }
+
+    #header_points {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    #header_form label {
+        font-size: 1.2rem;
+    }
+
 }
