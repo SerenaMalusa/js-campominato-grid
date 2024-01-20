@@ -63,3 +63,11 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 2. ogni volta che si clicca su una cella che non è una bomba il punteggio aumenta di 1
 3. quando il punteggio è uguale al punteggio massimo la partita finisce e la pagina genera un messaggio di vittoria
 4. sia nel messaggio di vittoria che nel messaggio di sconfitta devo mostrare il punteggio ottenuto
+
+### Bonus 2
+Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste.
+
+### Svolgimento
+al click di una bomba invoco la funzione show all bombs
+- creo un ciclo che gira per tutte le celle
+    - se il numero della cella è contenuto tra le bome aggiugno la classe bomb

@@ -65,8 +65,9 @@ function handleCellClick(cell) {
         // se l'indice della cella è presente tra le bombe
         if (bombs.includes(cellIndex)) {
             
-            //aggiungo la classe bomba
-            cell.classList.add('bomb');
+            //aggiungo la classe bomba a tutte le bombe
+            //cell.classList.add('bomb');
+            showAllBombs();
             gridContainerEl.classList.add('game-over');
             gameOver = true;
             alert(`Mi dispiace hai perso :(
@@ -120,5 +121,32 @@ function genBombs(totBombs, bombMax, bombMin = 1) {
     }
 
     return bombs;
+
+}
+
+/**
+ * funzione che mostra tutte le bombe 
+ */
+function showAllBombs() {
+
+    // riprendo tutte le celle
+    const cells = document.querySelectorAll('.cell');
+
+    // creo un ciclo che gira per tutte le celle
+    for (let i=0; i < cells.length; i++) {
+
+        // prendo la cella e l'attributo indice della cella
+        let cell = cells[i];
+        let cellIndex = parseInt(cell.getAttribute('data-index'));
+
+        // se il numero della cella è contenuto tra le bombe
+        if (bombs.includes(cellIndex)) {
+
+            // aggiungo la classe bomb e mostro il numero di cella
+            cell.classList.add('bomb');
+            cell.innerText = cellIndex;
+
+        }
+    }
 
 }

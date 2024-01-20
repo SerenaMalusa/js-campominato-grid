@@ -6,6 +6,7 @@ const difficultySelectEL = document.getElementById('difficulty');
 
 // genero la griglia da 100 celle in grid_container
 createGrid (gridContainerEl, 100);
+
 // genero 16 bombe da 1 a 100
 let bombs = genBombs (16,100);
 console.log(bombs);
@@ -24,8 +25,9 @@ resetGridBtnEl.addEventListener('click', function () {
 
     gameOver = false;
 
-    // svuoto la griglia presente
+    // svuoto e resetto la griglia presente
     gridContainerEl.innerHTML = ' ';
+    gridContainerEl.classList.remove('game-over');
 
     //prendo il valore del select e lo salvo nella variabile tot celle
     const totCells = parseInt(difficultySelectEL.value);
