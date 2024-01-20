@@ -60,6 +60,9 @@ function handleCellClick(cell) {
     // prenDo l'attributo indice della cella
     let cellIndex = parseInt(cell.getAttribute('data-index'));
 
+    // mostro il contatore dei punti
+    headerPointsEl.classList.remove('d-none');
+
     if (!gameOver) {
 
         // se l'indice della cella è presente tra le bombe
@@ -95,7 +98,6 @@ function handleCellClick(cell) {
         }
 
     }
-
 }
 
 /**
@@ -135,7 +137,7 @@ function showAllBombs() {
     // creo un ciclo che gira per tutte le celle
     for (let i=0; i < cells.length; i++) {
 
-        // prendo la cella e l'attributo indice della cella
+        // prendo l'attributo indice della cella
         let cell = cells[i];
         let cellIndex = parseInt(cell.getAttribute('data-index'));
 

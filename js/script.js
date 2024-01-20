@@ -3,6 +3,7 @@
 const gridContainerEl = document.getElementById('grid_container');
 const resetGridBtnEl = document.getElementById('header_btn');
 const difficultySelectEL = document.getElementById('difficulty');
+const headerPointsEl = document.getElementById('header_points');
 const pointsCounterEl = document.getElementById('points_counter');
 
 // genero la griglia da 100 celle in grid_container
