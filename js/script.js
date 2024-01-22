@@ -39,7 +39,7 @@ resetGridBtnEl.addEventListener('click', function () {
     console.log(bombs);
 
     // rigenero il punteggio massimo in base alla difficoltà
-    maxPoints = totCells - 16;
+    maxPoints = totCells - bombs.length;
 
     // resetto il punteggio utente
     userPoints = 0;
